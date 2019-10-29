@@ -1,0 +1,63 @@
+<input type="text" #input  />
+<button (click)="showRes(input.value)">find</button>
+
+<p>Found results: {{valuer}}</p>
+
+<br>
+<br>
+
+<button (click)="logins()">login</button>
+<button (click)="registration()">register</button>
+
+<div *ngIf="log">
+
+  <form>
+    EMAIL:
+    <input type="email">
+    <br>
+    PASSWORD:
+    <input type="password">
+    <br>
+    <br>
+    <button>Ok</button>
+  </form>
+</div>
+
+<div *ngIf="reg">
+  <form>
+
+  NAME:
+  <input type="text">
+  <br>
+  SURNAME:
+  <input type="text">
+  <br>
+  EMAIL:
+  <input type="email">
+  <br>
+  PASSWORD:
+  <input type="password">
+  <br>
+  PASSWORDREPEAT:
+  <input type="password">
+  <br>
+
+  <button>Apply</button>
+</form>
+
+</div>
+
+<button (click)="ShowAp()">Show available apartments</button>
+
+<div  *ngFor="let apartment of apartments" *ngIf="showHide">
+
+  ID:  {{apartment.id}}
+  <br>
+  <br>
+  CITY: {{apartment.location}}
+  <br>
+  <br>
+  cost: {{apartment.cost}}
+  <br>
+
+<div></div>
